@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A real-time weather dashboard displaying temperature, humidity, wind speed and weather conditions.">
+    <title>WeatherNow | Live Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <a href="#" class="logo">Weather<span>Now</span></a>
+            <p>REAL-TIME WEATHER DASHBOARD</p>
+        </header>
+
+```
+    <section class="search-section">
+        <h1>Discover Your Weather</h1>
+        <p class="subtitle">Get current weather conditions for any city in the world.</p>
+
+        <form id="weatherForm" class="search-form">
+            <label for="cityInput" class="visually-hidden">Enter city name</label>
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name, e.g. Chennai"
+                autocomplete="off"
+                required
+            >
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite">
+            Enter a city to check its current weather.
+        </p>
+    </section>
+
+    <section id="weatherDashboard" class="weather-dashboard" hidden>
+        <div class="weather-card">
+            <div class="location-row">
+                <div>
+                    <p class="eyebrow">CURRENT WEATHER</p>
+                    <h2 id="cityName">City</h2>
+                    <p id="countryName" class="country"></p>
+                    <p id="localTime" class="local-time"></p>
+                </div>
+                <img id="weatherIcon" class="weather-icon" src="" alt="Weather condition">
+            </div>
+
+            <div class="temperature-section">
+                <div>
+                    <p id="temperature" class="temperature">--°C</p>
+                    <p id="weatherDescription" class="description">Weather condition</p>
+                </div>
+                <div class="feels-like">
+                    <span>Feels like</span>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="metrics">
+                <article class="metric">
+                    <span class="metric-icon">💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </article>
+
+                <article class="metric">
+                    <span class="metric-icon">💨</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed">-- m/s</h3>
+                    </div>
+                </article>
+
+                <article class="metric">
+                    <span class="metric-icon">🌡️</span>
+                    <div>
+                        <p>Pressure</p>
+                        <h3 id="pressure">-- hPa</h3>
+                    </div>
+                </article>
+
+                <article class="metric">
+                    <span class="metric-icon">👁️</span>
+                    <div>
+                        <p>Visibility</p>
+                        <h3 id="visibility">-- km</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>WeatherNow · Live weather powered by OpenWeather</p>
+    </footer>
+</main>
+```
+
+</body>
+</html>
